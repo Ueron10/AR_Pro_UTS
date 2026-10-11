@@ -14,24 +14,19 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <div class="info-overlay">
-        <h1>AR Marker-Based - Phoenix Bird</h1>
+        <h1>AR Marker-Based - Porsche 911 Carrera 4S</h1>
         <p>Arahkan kamera ke marker Hiro untuk melihat model 3D</p>
     </div>
 
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         <!-- Marker Hiro -->
         <a-marker preset="hiro">
-            <!-- Phoenix Bird GLB Model -->
-            <a-entity gltf-model="url(phoenix_bird.glb)"
-                      position="0 0 0"
-                      scale="0.5 0.5 0.5"
-                      rotation="0 0 0">
+            <!-- Porsche 911 Carrera 4S GLB Model -->
+            <a-entity gltf-model="./free_porsche_911_carrera_4s.glb"
+                      position="0 0.5 0"
+                      scale="1.0 1.0 1.0"
+                      rotation="0 -90 0">
             </a-entity>
-            
-            <!-- Lighting -->
-            <a-light type="ambient" color="#BBB" intensity="0.5"></a-light>
-            <a-light type="point" intensity="1.5" position="2 4 4"></a-light>
-            <a-light type="directional" intensity="0.8" position="-5 10 5"></a-light>
         </a-marker>
 
         <!-- Camera -->
